@@ -224,6 +224,7 @@ hr {
 }
 
 @media (max-width: 1024px) {
+    /* Ajustes para telas de tablet/desktop menores */
     .text-home {
         width: 50%; 
         margin-left: 50px; 
@@ -253,9 +254,46 @@ hr {
     .profile-pick img {
         width: 300px; 
     }
+
+    /* SOBRE */
+    .sobre {
+        width: 80%; /* Aumenta a largura em tablets */
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .sobre h1 {
+        font-size: 32px;
+    }
+
+    /* HARDSKILLS */
+    .categorias {
+        flex-wrap: wrap; /* Permite que as categorias quebrem a linha */
+        justify-content: center;
+        padding: 0 10px;
+    }
+    .categorias li {
+        width: 140px;
+        font-size: 18px;
+    }
+    /* PROJETOS */
+    .projeto-container {
+        padding: 0 20px;
+    }
+    /* CONTATO */
+    .contato-conteudo {
+        width: 90%;
+        gap: 40px;
+    }
+    .forms-contato, .contatos-links {
+        flex-basis: 50%; /* Divide o espaço mais uniformemente */
+    }
+    .contatos-links a {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 768px) {
+    /* Ajustes para telas de celular (landscape e portrait) */
     .navbar {
         height: 60px; 
         padding-left: 15px;
@@ -344,9 +382,118 @@ hr {
         padding-top: 3px;
         margin-top: 10px; 
     }
+    
+    /* --- SEÇÃO SOBRE --- */
+    .sobre {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center; /* Centraliza o texto */
+    }
+    .sobre h2 {
+        font-size: 24px;
+    }
+    .sobre p {
+        font-size: 16px;
+    }
+    #entrarContato-link {
+        margin: auto; /* Centraliza o botão */
+    }
+
+    /* --- SEÇÃO HARDSKILLS --- */
+    .hardskills {
+        margin-top: 100px;
+    }
+    .categorias {
+        /* Garante quebra de linha forçada em telas menores */
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 5px;
+    }
+    .categorias li {
+        width: 100px; /* Deixa os botões menores */
+        font-size: 14px;
+        height: 35px;
+        padding-top: 7px;
+    }
+    .hardskill-content {
+        /* Permite que os ícones se organizem em 2-3 colunas */
+        gap: 10px;
+        padding: 0 10px;
+    }
+    .icons-categories {
+        width: 120px; /* Deixa os cartões menores */
+        height: 120px;
+    }
+    .icons-categories img {
+        height: 45px;
+    }
+    .icons-categories p {
+        font-size: 14px;
+    }
+    
+    /* --- SEÇÃO PROJETOS --- */
+    .projeto-container {
+        flex-direction: column; /* Coloca projetos em coluna única */
+        align-items: center;
+    }
+    .projeto-informacoes {
+        width: 90%; /* Ocupa a maior parte da tela */
+        max-width: 350px; 
+    }
+
+    /* --- SEÇÃO CONTATO --- */
+    .contato {
+        padding: 50px 20px;
+    }
+    .contato-conteudo {
+        flex-direction: column; /* Coloca os blocos em coluna única */
+        width: 95%;
+        gap: 40px;
+        margin-top: 30px;
+    }
+    .forms-contato, .contatos-links {
+        flex-basis: auto;
+        width: 100%; /* Ocupa 100% do container pai (95% da tela) */
+    }
+    .contatos-links {
+        align-items: center; /* Centraliza os links */
+    }
+    .contatos-links a {
+        font-size: 18px;
+    }
 }
 
-/* --- EFEITO BACKGROUND DO MAIN --- */
+@media (max-width: 480px) {
+    /* Ajustes específicos para celulares pequenos */
+    .navbar h1 {
+        font-size: 26px;
+    }
+    .home-links {
+        flex-wrap: wrap; /* Permite que os links de contato quebrem a linha */
+        justify-content: center;
+    }
+    #projetos-link {
+        width: 130px;
+        font-size: 16px;
+        height: 35px;
+        padding-top: 5px;
+    }
+    .sobre h1 {
+        font-size: 28px;
+    }
+    .hardskills .categorias {
+        gap: 8px;
+    }
+    .hardskills .categorias li {
+        width: 90px;
+        font-size: 13px;
+    }
+}
+
+/* --- EFEITO BACKGROUND DO MAIN --- (MANTIDO) */
 
 .container-main {
     background-color: #000; 
@@ -372,7 +519,7 @@ hr {
     100% { background-position: 0% 50%; }
 }
 
-/* --- CLASSES DE ANIMAÇÃO GERAL AO ROLAR --- */
+/* --- CLASSES DE ANIMAÇÃO GERAL AO ROLAR --- (MANTIDO) */
 
 /* 1. Estado Inicial (Invisível e Deslocado) */
 .fade-up-item {
@@ -387,7 +534,7 @@ hr {
     transform: translateY(0);
 }
 
-/* --- SEÇÃO SOBRE --- */
+/* --- SEÇÃO SOBRE --- (MANTIDO o layout base) */
 
 .sobre {
     width: 50%;
@@ -430,7 +577,7 @@ hr {
     font-size: 20px;
 }
 
-/* --- SEÇÃO HARDSKILLS --- */
+/* --- SEÇÃO HARDSKILLS --- (MANTIDO o layout base) */
 
 .hardskills {
     display: flex;
@@ -556,7 +703,7 @@ hr {
     margin: auto;
 }
 
-/* --- SEÇÃO PROJETOS --- */
+/* --- SEÇÃO PROJETOS --- (MANTIDO o layout base) */
 
 .projeto {
     margin-top: 100px;
@@ -628,7 +775,7 @@ hr {
     box-sizing: border-box;
 }
 
-/* --- SEÇÃO CONTATO --- */
+/* --- SEÇÃO CONTATO --- (MANTIDO o layout base) */
 
 .contato {
     display: flex;
@@ -724,6 +871,7 @@ hr {
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 30px; 
     justify-content: center; 
 }
